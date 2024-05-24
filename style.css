@@ -1,0 +1,169 @@
+/* FONTS IMPORTATIONS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab&display=swap');
+
+/* GLOBAL VARIABLES */
+:root {
+    --color-01: rgb(0, 102, 255);
+    --color-02: #FFFFFF;
+    --color-03: rgb(0, 0, 20);
+    --color-04: rgb(0, 0, 60);
+    --color-05: #000064;
+    --color-06: rgb(0, 200, 0);
+
+    --font-01: 'Poppins', sans-serif;
+    --font-02: 'Roboto Slab', sans-serif;
+
+    scroll-behavior: smooth;
+}
+
+/* RESET */
+*{margin: 0; padding: 0; box-sizing: border-box; text-decoration: none; transition: .25s; font-family: var(--font-01); color: var(--color-01);}
+
+*::selection{
+    background-color: var(--color-01);
+    color: var(--color-03);
+}
+
+/* BODY */
+body {
+    background-color: var(--color-03);
+    overflow: none;
+}
+
+/* FORM */
+.form{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50vh;
+    left: 50vw;
+    max-width: 500px;
+    background-color: var(--color-03);
+    padding: 25px;
+    border-radius: 25px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    animation: shadow-animation 1s linear alternate infinite;
+}
+
+@keyframes shadow-animation {
+    0% {
+        box-shadow: 0px 0px 10px var(--color-01);
+    }
+
+    100% {
+        box-shadow: 0px 0px 30px var(--color-01);
+    }
+}
+
+/* FIELDS */
+.fieldset{
+    border: none;
+    display: flex;
+    gap: 15px;
+}
+
+.field{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* INPUTS */
+input,
+#inputgender{
+    background-color: transparent;
+    border: 1px solid var(--color-01);
+    outline: none;
+    color: var(--color-02);
+    border-radius: 25px;
+    font-size: 14px;
+    text-wrap: nowrap;
+    padding: 10px 15px;
+    letter-spacing: 1px;
+    width: 100%;
+    text-transform: capitalize;
+}
+input::placeholder{color: transparent;}
+
+#inputage::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+#inputgender {
+    width: 100%;
+    padding-left: 10px;
+}
+
+#inputgender select{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-left: 5px;
+    color: var(--color-02);
+    font-size: 14px;
+    letter-spacing: 1px;
+    width: 100%;
+    text-transform: capitalize;
+    -webkit-appearance: none;
+}
+
+input:valid {
+    border: 1px solid var(--color-06);
+    color: var(--color-06);
+}
+
+#inputsubmit {
+    background-color: var(--color-01);
+    color: var(--color-02);
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+#inputsubmit:hover{
+    background-color: var(--color-05);
+    letter-spacing: 5px;
+}
+
+/* LABELS */
+label{
+    position: absolute;
+    font-size: 14px;
+    margin: 5px 15px;
+    border-radius: 25px;
+    text-transform: capitalize;
+    text-wrap: nowrap;
+    background-color: var(--color-03);
+    color: var(--color-02);
+}
+
+input:hover + label,
+input:focus + label,
+input:not(:placeholder-shown) + label,
+input + label:hover{
+    transform: translate(5px, -20px);
+    font-size: 10px;
+    color: var(--color-01);
+}
+
+#inputgender select:valid{
+    color: var(--color-06);
+}
+
+#inputgender:has(select:valid){
+    border: 1px solid var(--color-06);
+}
+
+input:valid:not(:placeholder-shown) + label{
+    color: var(--color-06);
+}
+
+@media screen and (max-width: 600px){
+    .fieldset{
+        flex-direction: column;
+        gap: 25px;
+    }
+}

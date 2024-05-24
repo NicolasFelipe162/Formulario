@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <form class="form" autocomplete="off">
+        <h2>Cadastro</h2>
+        <fieldset class="fieldset">
+            <div class="field">
+                <input type="text" name="firstname" id="inputfirstname" class="typeinputs" required placeholder="." autofocus>
+                <label for="firstname" id="labelfirstname">Nome</label>
+            </div>
+            <div class="field">
+                <input type="text" name="lastname" id="inputlastname" class="typeinputs" required placeholder=".">
+                <label for="lastname" id="labellastname">Sobrenome</label>
+            </div>
+        </fieldset>
+        <fieldset class="fieldset">
+            <div class="field">
+                <input type="number" name="age" id="inputage" class="typeinputs" min="1" max="99" required placeholder=".">
+                <label for="age" id="labelage">Idade</label>
+            </div>
+            <div class="field">
+                <div id="inputgender">
+                    <select required>
+                        <option value="">Sexo</option>
+                        <option value="Male">Masculino</option>
+                        <option value="Female">Feminino</option>
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+        <input type="submit" name="submit" id="inputsubmit" value="Enviar">
+    </form>
+</body>
+
+</html>
