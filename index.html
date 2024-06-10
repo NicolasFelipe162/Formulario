@@ -4,40 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="logo.png">
     <link rel="stylesheet" href="style.css">
     <title>Cadastro</title>
 </head>
 
 <body>
-    <form class="form" autocomplete="off">
-        <h2>Cadastro de visitante</h2>
-        <fieldset class="fieldset">
-            <div class="field">
-                <input type="text" name="firstname" id="inputfirstname" class="typeinputs" required placeholder="." autofocus>
-                <label for="firstname" id="labelfirstname">Nome</label>
-            </div>
-            <div class="field">
-                <input type="text" name="lastname" id="inputlastname" class="typeinputs" required placeholder=".">
-                <label for="lastname" id="labellastname">Sobrenome</label>
-            </div>
-        </fieldset>
-        <fieldset class="fieldset">
-            <div class="field">
-                <input type="number" name="age" id="inputage" class="typeinputs" min="1" max="99" required placeholder=".">
-                <label for="age" id="labelage">Idade</label>
-            </div>
-            <div class="field">
-                <div id="inputgender">
-                    <select required>
-                        <option value="">Sexo</option>
-                        <option value="Male">Masculino</option>
-                        <option value="Female">Feminino</option>
-                    </select>
-                </div>
-            </div>
-        </fieldset>
-        <input type="submit" name="submit" id="inputsubmit" value="Enviar">
-    </form>
+    <main>
+        <section class="secao-formulario">
+            <form class="formulario" autocomplete="off">
+                <h2 class="titulo-formulario">Registro de visitante</h2>
+                <fieldset class="grupo-campos">
+                    <div class="campo">
+                        <input type="text" name="primeiro-nome" id="input-primeiro-nome" class="inputs-texto" required
+                            placeholder="." autofocus>
+                        <label for="primeiro-nome" id="label-primeiro-nome">Nome</label>
+                    </div>
+                    <div class="campo">
+                        <input type="text" name="ultimo-nome" id="input-ultimo-nome" class="inputs-texto" required
+                            placeholder=".">
+                        <label for="ultimo-nome" id="label-ultimo-nome">Sobrenome</label>
+                    </div>
+                </fieldset>
+                <fieldset class="grupo-campos">
+                    <div class="campo">
+                        <select name="categoria" id="input-categoria" required>
+                            <option value=""></option>
+                            <option value="Estudante">Estudante</option>
+                            <option value="Responsável">Responsável</option>
+                            <option value="Pai ou mãe">Pai ou mãe</option>
+                            <option value="Visitante">Visitante</option>
+                        </select>
+                        <label for="input-categoria" id="label-categoria">Sou...</label>
+                    </div>
+                    <div class="campo">
+                        <input type="time" name="horario" id="input-horario" class="inputs-texto" required
+                            placeholder=".">
+                        <label for="horario" id="label-horario">Horário de chegada</label>
+                    </div>
+                </fieldset>
+                <input type="submit" name="enviar" id="input-enviar" value="Enviar">
+            </form>
+        </section>
+        <section class="secao-banner">
+            <div class="banner"></div>
+        </section>
+    </main>
+    <a href="https://instagram.com/nicolas.felipef" target="_blank">Nícolas Felipe Ferreira Souza</a>
 </body>
 
 </html>
